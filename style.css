@@ -1,0 +1,123 @@
+body{
+    height: 100vh;  /* 100% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #E700C4;
+   background-color: #5F22D8;
+ 
+   /* делаем фон в клеточку */
+    /* background:linear-gradient(rgba(0,0,0,0.4), transparent 1px), */
+    /* linear-gradient(90deg, rgba(0,0,0,0.4), transparent 1px); */
+    /* background-size: 30px 30px; */
+    
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+button {
+    --b: 3px;   /* border thickness */
+    --s: .15em; /* size of the corner */
+    --c: #E700C4;
+    
+    padding: calc(.05em + var(--s)) calc(.3em + var(--s));
+    color: var(--c);
+    --_p: var(--s);
+    background:
+      conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--c) 0)
+      var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .2em;
+  }
+
+  button:hover,
+  button:focus-visible{
+    --_p: 0px;
+    outline-color: var(--c);
+    outline-offset: .05em;
+  }
+
+
+  button {
+   
+    font-family: system-ui, sans-serif;
+    
+    font-size: 2rem;
+    cursor: pointer;
+    border: none;
+    margin: .1em;
+  }
+ 
+/* настройки ячейки */
+td {
+    /* граница */
+        border:  2px solid #333;
+    /* высота и ширина ячейки */
+        height:  100px;
+        width:  100px;
+    /* выравнивание по центру */
+        text-align:  center;
+        vertical-align:  middle;
+    /* настраиваем шрифт */
+        font-family:  "Comic Sans MS", cursive, sans-serif;
+        font-size:  70px;
+    /* меняем вид курсора над ячейкой */
+        cursor: pointer;
+    }
+    
+    /* настройки всей таблицы */
+    table {
+      color: #E700C4;
+    /* общая граница пусть выглядит как одна */
+        border-collapse: collapse;
+    /* включаем абсолютное позиционирование */
+        /* position: absolute; */
+    /* размещаем таблицу на странице */
+        /* left: 50%; */
+        /* margin-left: -155px; */
+        /* top: 50px; */
+    }
+    
+    /* убираем границы снаружи таблицы, чтобы расчертить поле как для крестиков-ноликов */
+    table tr:first-child td {
+        border-top: 0;
+    }
+    
+    table tr:last-child td {
+        border-bottom: 0;
+    }
+    
+    table tr td:first-child {
+        border-left: 0;
+    }
+    
+    table tr td:last-child {
+        border-right: 0;
+    }
+    
+    /* блок с сообщением о конце игры */
+    .endgame {
+    /* на старте не показываем */
+      /* display: none; */
+    /* размеры и положение блока */
+      /* width: 200px; */
+      /* top: 120px; */
+      position: absolute;
+      /* left: 50%; */
+    /* цвет фона */
+      background-color: rgba(205,133,63, 0.8);
+    /* настраиваем отступы */
+      /* margin-left: -100px; */
+      /* padding-top: 50px; */
+      /* padding-bottom: 50px; */
+      text-align: center;
+      align-items: center;
+    /* радиус скругления */
+      border-radius: 5px;
+      padding: 10px 20px;
+    /* цвет и размер шрифта */
+      color: white;
+      font-size: 2em;
+    }

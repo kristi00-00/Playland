@@ -1,0 +1,22 @@
+
+:root {
+   /* --background-color */
+--background-color-blu: #53B3F9;
+ /* font */
+ --font-family: 'Nanum Brush Script', cursive;
+ }
+ /* тело */
+body{
+    background-color:  var(--background-color-blu);
+}
+ /* контейнер  */
+.container{
+    font-family: var(--font-family);
+    margin: 150px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  Game 2048 </title>
+    <!-- подключаем css -->
+    <link rel="stylesheet" href="css/style/game-2048.css">
+    <!-- подключаем шрифт -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- контейнер -->
+    <div class="container">
+    	<header class="header">
+            <!-- подключаем иконку -->
+            <div class="lord-icon">
+            	<a href="index.html">
+            		<lord-icon 
+            			src="https://cdn.lordicon.com/cnpvyndp.json"
+            			trigger="hover"
+            			colors="primary:#EA6FF6"
+            			style="width:50px;height:50px"
+            			cursor="pointer">
+            		</lord-icon>
+            	</a>
+            </div>
+        </header>
+            <!--  счет и рекорд  -->
+        <div class="score-container">
+            <div>Score : <span id="current-score">0</span></div>
+            <div>High Score : <span id="high-score">0</span></div>
+        </div>
+        <!--  игровое поле  -->
+        <div class="game-container">
+            <div class="grid">
+                <div class="cell" data-row="0" data-col="0"></div>
+                <div class="cell" data-row="0" data-col="1"></div>
+                <div class="cell" data-row="0" data-col="2"></div>
+                <div class="cell" data-row="0" data-col="3"></div>
+                <div class="cell" data-row="1" data-col="0"></div>
+                <div class="cell" data-row="1" data-col="1"></div>
+                <div class="cell" data-row="1" data-col="2"></div>
+                <div class="cell" data-row="1" data-col="3"></div>
+                <div class="cell" data-row="2" data-col="0"></div>
+                <div class="cell" data-row="2" data-col="1"></div>
+                <div class="cell" data-row="2" data-col="2"></div>
+                <div class="cell" data-row="2" data-col="3"></div>
+                <div class="cell" data-row="3" data-col="0"></div>
+                <div class="cell" data-row="3" data-col="1"></div>
+                <div class="cell" data-row="3" data-col="2"></div>
+                <div class="cell" data-row="3" data-col="3"></div>
+            </div>
+        </div>
+        <!-- блок с сообщением о конце игры -->
+        <div id="game-over">
+            Game Over!
+            <button id="restart-btn">Restart Game</button>
+        </div>
+    </div>
+    <script src="js/game-2048.js"></script>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+</body>
+
+</html>

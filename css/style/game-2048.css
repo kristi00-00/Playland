@@ -1,0 +1,178 @@
+:root {
+    /* color-text */
+    --color-text-violet:#EA6FF6;
+    --color-text-white: #ffffff;
+    --color-text-blu: #53B3F9;
+    
+    /* --background-color */
+    --background-color-white: #ffffff;
+    --background-color-cell: #f4f4f4;
+    --background-color-over: rgba(240, 148, 10, 0.8);
+    --background-color-hover: #53B3F9;
+ 
+    /* font */
+    --font-family: 'Nanum Brush Script', cursive;
+    --font-size-1: 1.5rem;
+    --font-size-2: 2rem;
+    --font-size-3: 3rem;
+  }
+body{
+    background-color: var(--background-color-white);
+    min-width: 370px;
+    margin: auto;
+    touch-action: none;
+
+}
+/* контейнер */
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+   
+    font-family: var(--font-family);
+}
+/* хедер */
+.header{
+    height: 100%;
+    margin: 20px 0px;
+}
+/* игровое поле */
+.game-container{
+   width: 320px;
+   height: 320px;
+   /* border: 1px solid #ccc; */
+   overflow: hidden;
+   margin: 20px 0px;
+}
+/* задаем ячейки */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+}
+/* ячейки */
+.cell{
+    width: 77px;
+    height: 77px;
+    background-color: var(--background-color-cell);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-3);
+    color: var(--color-text-white);
+}
+/* счет и рекорд */
+.score-container{
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    color: var(--color-text-blu);
+    font-size: var(--font-size-1);
+}
+/* цвета ячеек */
+.cell[data-value="2"]{
+    background-color: #F8BAFB;
+}
+
+.cell[data-value="4"]{
+    background-color: #E8B7F8;
+}
+
+.cell[data-value="8"]{
+    background-color: #D1B3F4;
+}
+
+.cell[data-value="16"]{
+    background-color: #BDAFF1;
+}
+
+.cell[data-value="32"]{
+    background-color: #A6ABED;
+}
+
+.cell[data-value="64"]{
+    background-color: #8EA7E9;
+}
+
+.cell[data-value="128"]{
+    background-color: #A1A3BE;
+}
+
+.cell[data-value="256"]{
+    background-color: #B0A09B;
+}
+
+.cell[data-value="512"]{
+    background-color: #C29D73;
+}
+
+.cell[data-value="1024"]{
+    background-color: #D4994A;
+}
+
+.cell[data-value="2048"]{
+    background-color: #E39627;
+}
+
+.cell[data-value="4096"]{
+    background-color: #F0940A;
+}
+/* ховер btn */
+#restart-btn:hover{
+    background-color: var(--background-color-hover);
+    color: var(--color-text-white);
+}
+/* кнопка перезапуска */
+#restart-btn{
+    width: 200px;
+    height: 50px; 
+    border-radius: 5px;
+    padding: 10px 30px;
+    font-family: var(--font-family);
+    font-size: var(--font-size-1);
+    background-color: var(--background-color-white);
+    color: var(--color-text-violet);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+/* игра закончена */
+#game-over{
+    position: absolute;
+    border-radius: 5px;
+    top: 50%;
+    left: 50%;
+    padding: 20px 10px; 
+    transform: translate(-50%, -80%);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* цвет и размер шрифта */
+  color: var(--color-text-white);
+  font-size: var(--font-size-2);
+   /* цвет блока */
+  background-color: var(--background-color-over);
+}
+/* ячека */
+.grid-cell[data-value]{
+    transition: transform 0.2s, background-color 0.2s;
+}
+/* новая плитка */
+.new-tile{
+    animation: appear 0.3s;
+}
+/* анимация */
+@keyframes appear {
+    from{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}

@@ -86,14 +86,14 @@ function gameOver(gameWon) {
 	for (let index of winCombos[gameWon.index]) {
 		// и раскрашиваем её в нужные цвета
 		document.getElementById(index).style.backgroundColor =
-			gameWon.player == huPlayer ? "blue" : "turquoise";
+			gameWon.player == huPlayer ? "blue" : "yellow";
 	}
 	// убираем обработчик нажатия со всех клеток
 	for (var i = 0; i < cells.length; i++) {
 		cells[i].removeEventListener('click', turnClick, false);
 	}
 	// выводим сообщение о проигрыше или победе игрока
-	declareWinner(gameWon.player == huPlayer ? "Вы выиграли!" : "Вы проиграли.");
+	declareWinner(gameWon.player == huPlayer ? "You won!" : "You lose");
 }
 
 // вывод сообщения о победе
@@ -101,7 +101,7 @@ function declareWinner(who) {
 	// делаем сообщение видимым
 	document.querySelector(".endgame").style.display = "block";
 	// заполняем его нужным текстом
-	document.querySelector(".endgame .text").innerText = who;
+	document.querySelector(".endgame .endgame-text").innerText = who;
 }
 // функция, которая проверяет, пустая ли выбранная клетка на поле или нет
 function emptySquares() {
@@ -118,7 +118,7 @@ function checkTie() {
 			cells[i].removeEventListener('click', turnClick, false);
 		}
 		// выводим сообщение про ничью
-		declareWinner("Ничья!")
+		declareWinner("Draw!")
 		return true;
 	}
 	return false;

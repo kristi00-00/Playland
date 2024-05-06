@@ -1,0 +1,171 @@
+/* форма & анимация фона на index.html*/
+.back-shapes img {
+  opacity: 0.2;
+  position: absolute;
+  width: 1.5%;
+}
+
+.floating {
+  position: absolute;
+  animation-name: floating;
+  -webkit-animation-name: floating;
+  animation-duration: 5s;
+  -webkit-animation-duration: 5s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  color: white;
+}
+  /* квадрат размер и расположение*/
+.floating.square {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAABHNCSVQICAgIfAhkiAAAAUNJREFUWIXt2DFugzAUBuD/EVMGJMyQsZ3aA+QQ3ZjrIzKQgYWD5ACVOjRjBkBiSHF4XRJEIzmBCgiD/83Ysj9ZxrJNzIylRHQLREQAaMbxmTuz0WKUUk9Zlj0XRbHSWk8OEkKwlPKklNonSfLTYojISdP0JYqiz6kR16nr+o2Ivpi5cS4fy7JczQ25Hte51XDuCFOF1vpQVdWOiEb73ZiZfN/fCCHWgzBVVe3CMPwAcAQwBogAeHmeb6WU74Mw5xk5jozBrZk2Yjr5sxf8W0L3d4tFLWCLMcViTLEYUyzGFIsxxWJMsRhTFoXpc7iiPgejPv3ca2DEMDMB8C7FkTDeud9hGN/3N3meb6e4HQzGCCHWplP8VFnUAm4xQRCcHgHojisAgJkbpdS367qvc79CxHG8Z+YGAKh7JXr0+wwt6eXqFzNGfAM6wJFPAAAAAElFTkSuQmCC");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+  /* крестик- размер и расположение */
+.floating.circle{
+  display: inline-block;
+  width: 39px;
+  height: 39px;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACcAAAAnCAYAAACMo1E1AAAABHNCSVQICAgIfAhkiAAAA0pJREFUWIXdmL1O40AQx8fZ5BxQCqRrLqKxqKjAOl0JvMHxBIjHyCu4dGkJ+khpQNa9QeTyZIkihbtYCKWwbC1KFXbtvYJxbrIYMOBD1o20UhDe//x2dnb2w1BKQVut25SQYRhG+Vs1NGLjvToI0yHNwKawFWV7L+yb4AhQFwC6QRB8tyzrxDTN3V6vN2SMfc3zPBVCLFar1d18Pp8eHR2FACCxvQ1UKfVqg8eIMADo+75/kKbphRDiVtUwIcRtmqYXvu8fAEAfdYxafmuC9TzPs5IkuSyK4qEOlG5FUTwkSXLpeZ4FAL06gHXA+mEYnkops1f851LKe6VU/tJHUsosDMNTjOKLgK+CxXE8KopCVDjhWZZNZrPZ2Xg83rdtewcABrZt74zH4/3ZbHaWZdlESskroijiOB69BvgSmBnH8ahq9JzzK8dxLBTvweZqLRdNDwD6juNYnPOrKh0ENJ8DfDbHwjA81SMmpUyiKDoHgO06iU0W0nYURedSykSPIE5xZQ5WCTLP8yw9x5bL5dR13b26yVw1YNd195bL5VQbcIaLhL0IV+ZZkiSXesQQrPtWME2767runh7BJEkuq/LvSdR83z/QywVO5Zf3gmmAX6IoOtem9wHr4Eb09M5mmqYXtCPn/AoAtgCg8xEw4qMDAFv6IknT9AIAzEo4HNWAVn4pJcdV+SQfPgjIHMexaJkRQtwCwIDOzkaHIAiO6WiyLJvUKZbvnN5+lmUT6i8IgmMaiA7ZZpllWSd0310sFr8AIFeo2JShXo76a0P/rPybwhmmae7Sj29ubn4DQN4kGLEc9deG/tfnwo0wc86vSZRz3JIanVI6tbZt7yiyF3POr4Gk0QYcLZBSynvQEvQf5N0ADwtKqcdCT+HotEKe52n5mzE2sG27sWN8ldm23WWMDar8A2DOYYIqIcSC/m80Gn0DmgPNmoH66wChf1UuQBo5tVqt7mjvw8PDH0BWT8PGUH9t6H9dGShcPp/Pp/Tj4XD4EwAYvVk1YajHUH9t6P9vddATtJU7BHZq595ajqjNp5L2nufK6LXyJEyFWnmHIKLtu31pgO27t+qArbvxa4DteyvRAD/9lanV73P/z8tmDVgAaMGb8GfYHwpq7kYvpXclAAAAAElFTkSuQmCC");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  
+  }
+  /* крестик  отступы и анимация*/
+.floating.cross.cross-1{
+ top:77.3237997957099%;     
+ left:4.583333333333333%;
+ animation-delay:-3.75s;
+  }
+  /* круг отступы и анимация */
+.floating.circle.circle-1{
+  top:39.7344228804903%;   
+  left:10.833333333333334%;
+  animation-delay:-3.35s;
+}
+.floating.cross.cross-2{
+  top:5.575076608784474%;
+  left:10.25%;
+  animation-delay:-4.05s;
+}
+.floating.circle.circle-2{
+  top:66.59856996935649%;   
+  left:13.020833333333334%;
+  animation-delay:-0.9s;
+}
+.floating.cross.cross-3{
+  top:30.4729315628192032%;
+  left:19.635416666666668%;
+  animation-delay:-4.3s;
+}
+.floating.cross.cross-4{
+  top:55.87334014300306%; 
+  left:27.135416666666668%;
+  animation-delay:-2.25s;
+}  
+.floating.circle.circle-3{
+  top:15.117466802860061%;
+  left:32.34375%;
+  animation-delay:-4.1s;
+}
+.floating.cross.cross-5{
+  top:76.50663942798774%; 
+ left:38.020833333333336%;
+ animation-delay:-4s;
+}
+.floating.circle.circle-4{
+  top:50.074565883554648%;
+  left:45.989583333333336%;
+  animation-delay:-3.65s;
+}
+.floating.cross.cross-6{
+  top:31.3585291113381%;     
+  left:58.541666666666664%;
+  animation-delay:-0.65s;
+  
+}
+.floating.circle.circle-5{
+  top:80.074565883554648%;   
+  left:66.989583333333336%;
+  animation-delay:-3.65s;
+
+}
+.floating.cross.cross-7{
+  top:0.9193054136874361%;   
+  left:71.14583333333333%;
+  animation-delay:-3.3s;
+
+}
+.floating.cross.cross-8{
+  top:15.9193054136874361%;   
+  left:76.14583333333333%;
+  animation-delay:-3.3s;
+
+}
+.floating.cross.cross-9{
+  top:69.96935648621042%;     
+  left:81.45833333333333%;
+  animation-delay:-0.4s;
+
+}
+.floating.circle.circle-6{
+  top:25.074565883554648%;   
+  left:79.989583333333336%;
+  animation-delay:-3.65s;
+}
+/* квадрат   отступы и анимация */*/
+.floating.square.square-1{
+  top:70.450459652706844%;
+  left:14.0625%;
+  animation-delay:-2.8s;
+}
+.floating.square.square-2{
+  top:61.51174668028601%;
+  left:63.59375%;
+  animation-delay:-0.35s;
+ 
+ 
+}
+.floating.square.square-3{
+top:8.682328907048008%;
+left:72.70833333333333%;
+animation-delay:-1.9s;
+}
+.floating.square.square-4{
+  top:11.542390194075587%;
+  left:91.51041666666667%;
+  animation-delay:-0.1s;
+}
+.floating.cross {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAlCAYAAADFniADAAAABHNCSVQICAgIfAhkiAAAAgJJREFUWIXN2MFO4zAQBuDfbSpaiUOvvTRS3w6EoEChwAvsZS9IvAnwOK5rV5V7Se8cNrOHNVXWpMk4caEj5dDInvkySeMkgohwbNH5aUBZJP4OIYQA0HU//9ABWllXo+MN7gDobzab+/V6fQbgxCWIDTqx1k6ttdPSGkQEBxUABsaYJ/oXuZTyGkAfgPgc12ZzNfpa6zkR5USUa63nfo3ihMRae0f/Ry6lvIkBKwHtalhrZwCSz7H+hU5u23V7Mpn8llKel7Y58JRpra/G4/EvB9wfjCMhIsoXi8Vtk47V5a08fZwEy+UyCNYE9AUVE9YUVIpiwmZVsDagvag2sLagShQTdlcsEANUiwqEJTFALBSzA/cAhjFAbBQHlmXZWwxQEIoB86MRKBhVgA2UUg8VsFwp9QBgEApqhHKwLoBhlmXvZaLtdvsKYAig2yj/ATs1/5ZOhV5T/n0sOorx73sv298EFgXk/mV771N1a2UwKmDpqLyjh8BigVhrH/uxJxaIO48Diwrizq97tI4O4uapeks6CKgt7GAgbl6l1NTPW5ycWGtnMUFc2Gq1ukTFy6gfZIx5TNP0GcAHuQqh4eZ9pGn6bIx5hPfC2+v1Tv0J+46mdYc4HTPGPMFbuEXx4AtfRC4AYDQavbTpUFl4NUShRr4b49c7hu9TX1DHEEf5efEvSKr5qd+QqggAAAAASUVORK5CYII=");}
+    @keyframes floating {
+        0% {
+          transform: translateY(0%) rotate(-55deg);
+        }
+        50% {
+          transform: translateY(300%) rotate(55deg);
+        }
+        100% {
+          transform: translateY(0%) rotate(-55deg);
+        }
+      }
+      @-webkit-keyframes floating {
+        0% {
+          -webkit-transform: translateY(0%);
+        }
+        50% {
+          -webkit-transform: translateY(300%);
+        }
+        100% {
+          -webkit-transform: translateY(0%);
+        }
+      }
